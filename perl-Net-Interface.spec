@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Net
-%define	pnam	Interface
+%define		pdir	Net
+%define		pnam	Interface
 Summary:	Net::Interface - Perl extension to access network interfaces
 Summary(pl):	Net::Interface - modu³ umo¿liwiaj±cy dostêp do interfejsów sieciowych
 Name:		perl-Net-Interface
