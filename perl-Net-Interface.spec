@@ -5,11 +5,11 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Net
 %define	pnam	Interface
-Summary:	Net::Interface perl module
-Summary(pl):	Modu³ perla Net::Interface
+Summary:	Net::Interface - Perl extension to access network interfaces
+Summary(pl):	Net::Interface umo¿liwia dostêp do interfejsów sieciowych
 Name:		perl-Net-Interface
 Version:	0.04
-Release:	9
+Release:	10
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -21,10 +21,13 @@ BuildRequires:	perl-devel >= 1:5.8.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Net::Interface - Perl extension to access network interfaces.
+Net::Interface is designed to make the use of ifconfig(1) and friends
+unnecessary from within Perl.  It provides methods to get at set all
+the attributes of an interface, and even create new logical or physical
+interfaces (if your O/S supports it).
 
-%description -l pl
-Net::Interface umo¿liwia dostêp do interfejsów sieciowych.
+# %description -l pl
+# TODO
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
