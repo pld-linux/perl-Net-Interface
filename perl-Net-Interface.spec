@@ -6,7 +6,7 @@
 %define	pdir	Net
 %define	pnam	Interface
 Summary:	Net::Interface - Perl extension to access network interfaces
-Summary(pl):	Net::Interface umo¿liwia dostêp do interfejsów sieciowych
+Summary(pl):	Net::Interface - modu³ umo¿liwiaj±cy dostêp do interfejsów sieciowych
 Name:		perl-Net-Interface
 Version:	0.04
 Release:	10
@@ -16,18 +16,22 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	f2068361cc7613769770202952bf3d5d
 Patch0:		%{name}-perl-5.6.patch
-BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Net::Interface is designed to make the use of ifconfig(1) and friends
-unnecessary from within Perl.  It provides methods to get at set all
-the attributes of an interface, and even create new logical or physical
-interfaces (if your O/S supports it).
+unnecessary from within Perl. It provides methods to get and set all
+the attributes of an interface, and even create new logical or
+physical interfaces (if your O/S supports it).
 
-# %description -l pl
-# TODO
+%description -l pl
+Net::Interface zosta³ zaprojektowany, aby uczyniæ u¿ywanie ifconfig(1)
+i spó³ki z poziomu Perla niepotrzebnym. Dostarcza metody do
+odczytywania i ustawiania wszystkich atrybutów interfejsu, a nawet
+tworzenia nowych logicznych i fizycznych interfejsów (o ile system
+operacyjny na to pozwala).
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
