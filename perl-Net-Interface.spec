@@ -1,12 +1,11 @@
+%include	/usr/lib/rpm/macros.perl
 %define	pdir	Net
 %define	pnam	Interface
-%include	/usr/lib/rpm/macros.perl
 Summary:	Net-Interface perl module
 Summary(pl):	Modu³ perla Net-Interface
 Name:		perl-Net-Interface
 Version:	0.04
-Release:	6
-
+Release:	7
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -22,7 +21,7 @@ Net-Interface - Perl extension to access network interfaces.
 Net-Interface umo¿liwia dostêp do interfejsów sieciowych.
 
 %prep
-%setup -q -n Net-Interface-%{version}
+%setup -q -n %{pdir}-%{pnam}-%{version}
 %patch0 -p1
 
 %build
