@@ -9,6 +9,7 @@ Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Net/Net-Interface-%{version}.tar.gz
+Patch0:		%{name}-perl-5.6.patch
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.6
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -21,6 +22,7 @@ Net-Interface umo¿liwia dostêp do interfejsów sieciowych.
 
 %prep
 %setup -q -n Net-Interface-%{version}
+%patch0 -p1
 
 %build
 perl Makefile.PL
