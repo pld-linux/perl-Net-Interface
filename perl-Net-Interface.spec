@@ -25,7 +25,7 @@ Net::Interface umo¿liwia dostêp do interfejsów sieciowych.
 %patch0 -p1
 
 %build
-perl Makefile.PL
+%{__perl} Makefile.PL
 %{__make} OPTIMIZE="%{rpmcflags}"
 
 %install
