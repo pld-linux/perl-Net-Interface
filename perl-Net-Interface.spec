@@ -3,7 +3,7 @@ Summary:	Net-Interface perl module
 Summary(pl):	Modu³ perla Net-Interface
 Name:		perl-Net-Interface
 Version:	0.04
-Release:	4
+Release:	5
 License:	GPL
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
