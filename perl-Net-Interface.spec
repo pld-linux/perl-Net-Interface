@@ -5,12 +5,12 @@ Summary:	Net::Interface perl module
 Summary(pl):	Modu³ perla Net::Interface
 Name:		perl-Net-Interface
 Version:	0.04
-Release:	7
+Release:	8
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 Patch0:		%{name}-perl-5.6.patch
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	perl >= 5.6
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -25,7 +25,8 @@ Net::Interface umo¿liwia dostêp do interfejsów sieciowych.
 %patch0 -p1
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make} OPTIMIZE="%{rpmcflags}"
 
 %install
@@ -39,9 +40,9 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%{perl_sitearch}/Net/Interface.pm
-%dir %{perl_sitearch}/auto/Net/Interface
-%{perl_sitearch}/auto/Net/Interface/autosplit.ix
-%{perl_sitearch}/auto/Net/Interface/Interface.bs
-%attr(755,root,root) %{perl_sitearch}/auto/Net/Interface/Interface.so
+%{perl_vendorarch}/Net/Interface.pm
+%dir %{perl_vendorarch}/auto/Net/Interface
+%{perl_vendorarch}/auto/Net/Interface/autosplit.ix
+%{perl_vendorarch}/auto/Net/Interface/Interface.bs
+%attr(755,root,root) %{perl_vendorarch}/auto/Net/Interface/Interface.so
 %{_mandir}/man3/*
