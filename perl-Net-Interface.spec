@@ -1,3 +1,7 @@
+#
+# Conditional build:
+%bcond_without	tests	# do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Net
 %define	pnam	Interface
@@ -6,7 +10,8 @@ Summary(pl):	Modu³ perla Net::Interface
 Name:		perl-Net-Interface
 Version:	0.04
 Release:	8
-License:	GPL
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	f2068361cc7613769770202952bf3d5d
@@ -28,12 +33,16 @@ Net::Interface umo¿liwia dostêp do interfejsów sieciowych.
 %build
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
-%{__make} OPTIMIZE="%{rpmcflags}"
+%{__make} \
+	OPTIMIZE="%{rpmcflags}"
+
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
