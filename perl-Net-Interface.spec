@@ -1,8 +1,8 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Net
 %define	pnam	Interface
-Summary:	Net-Interface perl module
-Summary(pl):	Modu³ perla Net-Interface
+Summary:	Net::Interface perl module
+Summary(pl):	Modu³ perla Net::Interface
 Name:		perl-Net-Interface
 Version:	0.04
 Release:	7
@@ -15,10 +15,10 @@ BuildRequires:	perl >= 5.6
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Net-Interface - Perl extension to access network interfaces.
+Net::Interface - Perl extension to access network interfaces.
 
 %description -l pl
-Net-Interface umo¿liwia dostêp do interfejsów sieciowych.
+Net::Interface umo¿liwia dostêp do interfejsów sieciowych.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
