@@ -1,0 +1,29 @@
+--- Net-Interface-0.04/Interface.xs~	Wed Jul 29 19:47:03 1998
++++ Net-Interface-0.04/Interface.xs	Wed Apr 18 03:51:41 2001
+@@ -161,7 +161,7 @@
+       stash = SvROK (ST (0)) ? SvSTASH (SvRV (ST (0))) : 
+ 	gv_stashsv (ST (0), 0);
+       NI_NEW_REF (rv, sv, stash);
+-      Move (SvPV (ST (1), na), ((ifreq *) SvPVX (sv))->ifr_name, 
++      Move (SvPV (ST (1), PL_na), ((ifreq *) SvPVX (sv))->ifr_name, 
+ 	    SvCUR (ST (1)) + 1, char);
+       NI_CONNECT (fd);
+       NI_ACCESS (fd, SIOCGIFFLAGS, SvPVX (sv));
+@@ -201,7 +201,7 @@
+       NI_REF_CHECK (ST (0));
+       NI_CONNECT (fd);
+       ifr = (ifreq *) SvPVX (SvRV (ST (0)));
+-      ST (0) = &sv_undef;
++      ST (0) = &PL_sv_undef;
+       switch (ix) {
+       case NI_FLAGS:
+ 	NI_ACCESS (fd, SIOCGIFFLAGS, ifr);
+@@ -263,7 +263,7 @@
+       NI_REF_CHECK (ST (0));
+       NI_CONNECT (fd);
+       ifr = (ifreq *) SvPVX (SvRV (ST (0)));
+-      ST (0) = &sv_undef;
++      ST (0) = &PL_sv_undef;
+       switch (ix) {
+       case NI_ADDR:
+ 	NI_ACCESS (fd, SIOCGIFADDR, ifr);
