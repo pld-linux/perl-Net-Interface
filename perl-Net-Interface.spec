@@ -6,7 +6,7 @@
 %define		pdir	Net
 %define		pnam	Interface
 Summary:	Net::Interface - Perl extension to access network interfaces
-Summary(pl):	Net::Interface - modu³ umo¿liwiaj±cy dostêp do interfejsów sieciowych
+Summary(pl.UTF-8):   Net::Interface - moduÅ‚ umoÅ¼liwiajÄ…cy dostÄ™p do interfejsÃ³w sieciowych
 Name:		perl-Net-Interface
 Version:	0.08
 Release:	1
@@ -25,11 +25,11 @@ unnecessary from within Perl. It provides methods to get and set all
 the attributes of an interface, and even create new logical or
 physical interfaces (if your O/S supports it).
 
-%description -l pl
-Net::Interface zosta³ zaprojektowany, aby uczyniæ u¿ywanie ifconfig(1)
-i spó³ki z poziomu Perla niepotrzebnym. Dostarcza metody do
-odczytywania i ustawiania wszystkich atrybutów interfejsu, a nawet
-tworzenia nowych logicznych i fizycznych interfejsów (o ile system
+%description -l pl.UTF-8
+Net::Interface zostaÅ‚ zaprojektowany, aby uczyniÄ‡ uÅ¼ywanie ifconfig(1)
+i spÃ³Å‚ki z poziomu Perla niepotrzebnym. Dostarcza metody do
+odczytywania i ustawiania wszystkich atrybutÃ³w interfejsu, a nawet
+tworzenia nowych logicznych i fizycznych interfejsÃ³w (o ile system
 operacyjny na to pozwala).
 
 %prep
