@@ -6,7 +6,7 @@
 %define		pdir	Net
 %define		pnam	Interface
 Summary:	Net::Interface - Perl extension to access network interfaces
-Summary(pl.UTF-8):   Net::Interface - moduł umożliwiający dostęp do interfejsów sieciowych
+Summary(pl.UTF-8):	Net::Interface - moduł umożliwiający dostęp do interfejsów sieciowych
 Name:		perl-Net-Interface
 Version:	0.08
 Release:	1
