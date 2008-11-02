@@ -56,7 +56,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Changes
+%doc Changes README*
 %{perl_vendorarch}/Net/Interface.pm
 %dir %{perl_vendorarch}/auto/Net/Interface
 %attr(755,root,root) %{perl_vendorarch}/auto/Net/Interface/Interface.so
