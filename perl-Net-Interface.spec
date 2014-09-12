@@ -9,7 +9,7 @@ Summary:	Net::Interface - Perl extension to access network interfaces
 Summary(pl.UTF-8):	Net::Interface - moduł umożliwiający dostęp do interfejsów sieciowych
 Name:		perl-Net-Interface
 Version:	1.012
-Release:	2
+Release:	3
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
