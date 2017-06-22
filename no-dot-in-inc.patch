@@ -1,0 +1,11 @@
+--- Net-Interface-1.012/Makefile.PL~	2009-03-08 21:18:20.000000000 +0100
++++ Net-Interface-1.012/Makefile.PL	2017-06-22 08:49:41.884351526 +0200
+@@ -148,7 +148,7 @@
+ close F;
+ 
+ ################ build family definitions
+-do 'inst/netsymbols.pl';
++do './inst/netsymbols.pl';
+ ## END ######### build family definitions
+ 
+ sub MY::top_targets {

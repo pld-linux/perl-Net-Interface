@@ -9,12 +9,13 @@ Summary:	Net::Interface - Perl extension to access network interfaces
 Summary(pl.UTF-8):	Net::Interface - moduł umożliwiający dostęp do interfejsów sieciowych
 Name:		perl-Net-Interface
 Version:	1.012
-Release:	8
+Release:	9
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Net/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	cfa0c390c506996c004fb5b214fc4a7c
+Patch0:		no-dot-in-inc.patch
 URL:		http://search.cpan.org/dist/Net-Interface/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -35,6 +36,7 @@ operacyjny na to pozwala).
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
+%patch0 -p1
 
 %build
 %{__perl} Makefile.PL \
