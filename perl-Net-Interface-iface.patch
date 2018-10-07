@@ -1,0 +1,12 @@
+diff -ruN Net-Interface-1.016.orig/Interface.xs Net-Interface-1.016/Interface.xs
+--- Net-Interface-1.016.orig/Interface.xs	2016-09-21 22:19:59.000000000 +0200
++++ Net-Interface-1.016/Interface.xs	2018-10-07 23:51:43.384989813 +0200
+@@ -317,7 +317,7 @@
+ 	while (ifap != NULL) {
+ 	    len = strlen(ifap->ifa_name);
+ /* this is sub 'new', target only the 'name'	*/
+-	    if (ix && strncmp(ifap->ifa_name,keyname,len))
++	    if (ix && strcmp(ifap->ifa_name,keyname))
+ 		goto nextname;
+ /* interface is known?				*/
+ 	    if (hv_exists(ifaces,ifap->ifa_name,len))
