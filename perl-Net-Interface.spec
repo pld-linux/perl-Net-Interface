@@ -18,6 +18,7 @@ Patch0:		no-dot-in-inc.patch
 Patch1:		%{name}-iface.patch
 URL:		http://search.cpan.org/dist/Net-Interface/
 BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	perl-perldoc
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
