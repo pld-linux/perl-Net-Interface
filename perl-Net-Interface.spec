@@ -17,6 +17,7 @@ Source0:	http://www.cpan.org/modules/by-module/Net/%{pdir}-%{pnam}-%{version}.ta
 Patch0:		no-dot-in-inc.patch
 Patch1:		%{name}-iface.patch
 Patch2:		types.patch
+Patch3:		ub.patch
 URL:		http://search.cpan.org/dist/Net-Interface/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	perl-perldoc
@@ -41,6 +42,7 @@ operacyjny na to pozwala).
 %patch -P0 -p1
 %patch -P1 -p1
 %patch -P2 -p1
+%patch -P3 -p1
 
 %build
 %{__perl} Makefile.PL \

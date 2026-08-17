@@ -1,0 +1,20 @@
+--- Net-Interface-1.016/Interface.xs.orig	2026-08-17 22:03:46.547652298 +0200
++++ Net-Interface-1.016/Interface.xs	2026-08-17 22:18:35.968367176 +0200
+@@ -896,6 +896,7 @@
+ 	SV * sv;
+ 	char * key, * args = "args", * name = "name", * flav = "flav";
+ 	STRLEN len;
++	const char *s;
+     CODE:
+         if (!SvROK (ref) || !SvOBJECT(SvRV(ref)))
+ 	    croak ("Can't call method \"%s\" without a valid object reference", GvNAME (CvGV (cv)));
+@@ -916,7 +917,8 @@
+ 	sv = *hv_fetch(hv,name,niKEYsz,0);
+ 	if (!SvPOK(sv))
+ 	    goto no_data;
+-	strlcpy(ifr.ni_ifr_name,SvPV(sv,len),len +1);
++	s = SvPV(sv,len);
++	strlcpy(ifr.ni_ifr_name,s,len +1);
+ 	sv = *hv_fetch(hv,flav,niKEYsz,0);
+ 	if (!SvIOK(sv))
+ 	    goto no_data;
