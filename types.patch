@@ -1,0 +1,11 @@
+--- Net-Interface-1.016/ni_linuxproc.c.orig	2009-03-09 09:43:34.000000000 +0100
++++ Net-Interface-1.016/ni_linuxproc.c	2026-08-17 20:47:23.522015320 +0200
+@@ -348,7 +348,7 @@
+     return 0;
+ }
+ 
+-static void * returnull() { return NULL; }
++static void * returnull(int fd, void* ifc) { return NULL; }
+ 
+ static struct ni_ifconf_flavor ni_flavor_linuxproc = {
+     .ni_type		= NI_LINUXPROC,
